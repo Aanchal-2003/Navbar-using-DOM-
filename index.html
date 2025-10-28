@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+        padding:0;
+        margin:0;
+        box-sizing:border-box;
+        }
+        header {
+            width: 100%;
+            height: 82px;
+            box-shadow: 4px 2px 2px gray;
+        }
+        #bar{
+            font-size: 70px;
+        }
+        #navbar {
+            width: 200px;
+            height: 1000px;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            opacity: 0.5;
+            transition: 500ms;
+        }
+        .show{
+            right: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <i id="bar" onclick="demo()" class="fa-solid  fa-bars "></i>
+   
+        <div id="navbar"></div>
+    </header>
+
+
+    <script>
+        var box = document.getElementById("navbar");
+        var bar = document.getElementById("bar");
+              
+
+        function demo() {
+            box.classList.toggle("show");
+            bar.classList.toggle("fa-square-xmark")
+
+        }
+    </script>
+    
+</body>
+</html>
